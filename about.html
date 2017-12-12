@@ -171,7 +171,9 @@
         <div class="col-lg-8 col-md-10 mx-auto">
 
           <h2 class="section-heading">Results</h2>
-          <p>The main method I instituted for optimization took an extremely long time (5 to 10 minutes), no where close to real time application. The noise it did generate, if the pattern was simple enough, did look similar to the inputted values and generated similaily looking terrain when rendered as a heightmap</p>
+          <p>I was able to implement the algorithm in <em>Cheng (2014)</em> by instituting my own methods (stated above) for where the paper didn't state specifics. The results weren't ideal but more or less were what was expected.</p>
+
+          <p>Simulated annealing took an extremely long time (5 to 10 minutes) to converge, no where close to being viable for real time application. The noise it did generate, if the user inputted pattern was simple enough, did look similar to the inputted image and generated similaily looking terrain when rendered as a heightmap</p>
 
           <img class="img-fluid" style="display: block; margin: auto; width: 60%; border: 1px solid red" src="ex1.png" alt="">
           <span class="caption text-muted">Input Image</span>
@@ -287,6 +289,8 @@
           <p>There is large room for improvement in the optimization method itself. Finding a more accurate objective function or determining a direction of decent during the optimization could help tremenously in accurately converging to the correct solution quickly. This could lie in using a linear algebra approach rather than a statistical approach. Another solution could lie within finding a better method of chosing a neighboring gradient vector field during simmulated annleaing. Both of the optimization methods I implemented are no where near real time speeds. Becoming faster could lead to more realistic applications of this technique, such as being a tool for artists to use in world building.</p>
 
           <p>The general approach could also be applied to 3D Perlin Noise and be tested to see how accurately terrain generated with 3D noise matches a user inputted model. Currently I model my distribution of angles around the unit circle, which is only possible since it is constrained in 2D. The distribution would have to be adapted to 3D in order to try apply the same error function.</p>
+
+          <p>After the initial work done on this project, I believe that with more refinement this could become a viable method for procedurally generating 3D terrains with desired features or land forms, and become a viable and useful tool.</p>
 
         </div>
       </div>
