@@ -90,6 +90,10 @@
           <h2 class="section-heading">Previous Work</h2>
           <p>The basis of this proposal is comes from the paper <em>Cheng WC., Lin WC., Huang YJ. (2014) Controllable and Real-Time Producible Perlin Noise.</em> The paper specifies a way to control the value of the perlin noise function following some user specification through an optimization process. Texture generation is the main application of their method, producing reasonable results. This paper sites <em>Yoon, J., Lee, I.: Stable and controllable noise. Graphical Models 70, 105–115 (2008)</em> which has a similar approach.
             </p>
+
+          <img class="img-fluid" style="display: block; margin: auto; width: 90%;" src="results.jpg" alt="">
+          <span class="caption text-muted">Results taken from Cheng (2014)</span>
+
           <p>There has been a variety of work on generating procedural terrain. These techniques usually rely on some source of noise and have parameters which can be tuned to provide specific visual properties. <em>Olsen, J. (2004). Realtime Procedural Terrain Generation</em> gives an overview of a variety of methods which can produce randomly generated terrain in real time. <em>Doran, Jonathon, and Ian Parberry. Controlled Procedural Terrain Generation Using Software Agents</em> presents a method for controlling procedurally generated terrain but doesn’t utilize Perlin noise.
             </p>
         </div>
@@ -222,7 +226,7 @@
           <hr>
 
           <h2>New Results</h2>
-            <p>Utilizing the original method in the paper led to results of terrain that looked quite close to the inputted image. However most modifications of the algorithm, such as modifying the error function or optimization method, did not yield better or faster results.</p>
+            <p>Utilizing the original method in the paper led to results of terrain that looked quite close to the inputted image, meaning that this method can be used with limited success. However most modifications I did to the algorithm, such as modifying the error function or optimization method, did not yield better or faster results.</p>
           <br>
 
           <h2>Meeting Goals</h2>
@@ -274,11 +278,13 @@
             <p>Unfortunately due to long duration of the optimization, a graphical user interface to manipulate terrain did not seem to be reasonable for the project and was put as a last priority. Due to time constraints I did not get a chance to implement it
               </p>
 
+            <p>Overall I achieved most of my goals but unfortunately the results of my extensions of the base work were unsuccessful so those were the main goals that fell through</p>
+
           </ol>
 
           <h2>Future Work</h2>
 
-          <p>There is large room for improvement in the optimization method itself. Finding a more accurate objective function or determining a direction of decent during the optimization could help tremenously in accurately converging to the correct solution quickly. Another solution could lie within finding a better method of chosing a neighboring gradient vector field during simmulated annleaing. Both of the optimization methods I implemented are no where near real time speeds. Becoming faster could lead to more realistic applications of this technique, such as being a tool for artists to use in world building.</p>
+          <p>There is large room for improvement in the optimization method itself. Finding a more accurate objective function or determining a direction of decent during the optimization could help tremenously in accurately converging to the correct solution quickly. This could lie in using a linear algebra approach rather than a statistical approach. Another solution could lie within finding a better method of chosing a neighboring gradient vector field during simmulated annleaing. Both of the optimization methods I implemented are no where near real time speeds. Becoming faster could lead to more realistic applications of this technique, such as being a tool for artists to use in world building.</p>
 
           <p>The general approach could also be applied to 3D Perlin Noise and be tested to see how accurately terrain generated with 3D noise matches a user inputted model. Currently I model my distribution of angles around the unit circle, which is only possible since it is constrained in 2D. The distribution would have to be adapted to 3D in order to try apply the same error function.</p>
 
